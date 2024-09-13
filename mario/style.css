@@ -1,0 +1,104 @@
+/* style.css */
+
+/* ตั้งค่าเริ่มต้นสำหรับ body */
+body {
+    font-family: 'Press Start 2P', cursive; /* ฟอนต์ธีมเกม */
+    background: url('https://www.beartai.com/wp-content/uploads/2024/03/Mario-game-All.jpg') no-repeat center center fixed; /* พื้นหลังธีม Mario */
+    background-size: cover; /* ให้พื้นหลังครอบคลุมทั้งหน้าจอ */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    color: #fff; /* สีตัวอักษรขาว */
+}
+
+/* สไตล์สำหรับ header */
+h1 {
+    font-size: 4rem;
+    color: #ffcc00; /* สีเหลืองทอง */
+    margin: 20px 0;
+    text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.6); /* เงาบนข้อความ */
+    background: rgba(0, 0, 0, 0.6); /* พื้นหลังโปร่งแสง */
+    padding: 15px;
+    border-radius: 12px; /* มุมโค้งมน */
+    border: 5px solid #ff0000; /* ขอบสีแดง */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.8); /* เงาที่ลึก */
+}
+
+/* สไตล์สำหรับ canvas */
+#board {
+    background-color: #87ceeb; /* สีพื้นหลังของแคนวาส */
+    border: 10px solid #ffcc00; /* ขอบของแคนวาสสีเหลืองทอง */
+    border-radius: 15px; /* มุมโค้งมนของแคนวาส */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6); /* เงาเพื่อทำให้แคนวาสเด่นขึ้น */
+    margin: 20px auto; /* การจัดตำแหน่งแคนวาส */
+    display: block; /* ตั้งค่าให้เป็น block เพื่อให้ margin auto ทำงาน */
+}
+
+/* สไตล์สำหรับปุ่ม */
+button {
+    width: 200px;
+    height: 60px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #ff6f00, #ffb300); /* การไล่ระดับสีที่มีธีม Mario */
+    color: #fff; /* สีตัวอักษรขาว */
+    border: 3px solid #ff0000; /* ขอบสีแดง */
+    border-radius: 12px; /* มุมโค้งมนของปุ่ม */
+    cursor: pointer; /* เปลี่ยนเคอร์เซอร์เป็น pointer เมื่อวางเมาส์เหนือปุ่ม */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* เงาของปุ่ม */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* การเปลี่ยนแปลงเมื่อโฮเวอร์ */
+}
+
+/* สไตล์สำหรับปุ่มเมื่อวางเมาส์เหนือ */
+button:hover {
+    transform: scale(1.1); /* ขยายขนาดปุ่มเมื่อวางเมาส์ */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* เงาที่เข้มข้นเมื่อโฮเวอร์ */
+}
+
+/* สไตล์สำหรับข้อความเมื่อเกมจบ */
+#game-over-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+/* สไตล์สำหรับข้อความรายละเอียดในหน้าจอเกมจบ */
+#game-over-details {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #ffcc00;
+}
+
+/* สไตล์สำหรับข้อความเสริม */
+#game-over-footer {
+    font-size: 1rem;
+    color: #fff;
+    margin-top: 20px;
+    font-weight: normal;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem; /* ขนาดฟอนต์ของหัวข้อเล็กลงในหน้าจอเล็ก */
+    }
+
+    button {
+        width: 150px; /* ความกว้างของปุ่มเล็กลงในหน้าจอเล็ก */
+        height: 45px; /* ความสูงของปุ่มเล็กลงในหน้าจอเล็ก */
+        font-size: 1rem; /* ขนาดฟอนต์ของปุ่มเล็กลงในหน้าจอเล็ก */
+    }
+
+    #board {
+        width: 90%; /* ขนาดของแคนวาสในหน้าจอเล็ก */
+        height: auto; /* ความสูงของแคนวาสในหน้าจอเล็ก */
+    }
+}
